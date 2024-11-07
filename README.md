@@ -18,7 +18,7 @@ The student should:
 
 1. Prompt the user to enter a positive integer.
 2. Use a loop to check for prime numbers from 2 up to `n`.
-3. Print each prime number in a single line or as part of a list, whichever format is preferred.
+3. Print each prime number in a single line ( Comma Seperated ).
 
 ### Example of Input/Output
 
@@ -38,11 +38,7 @@ The student should:
 
 1. **Input less than 2**: If `n` is less than 2 (e.g., 1 or 0), no prime numbers should be output, as there are no prime numbers less than 2. Ensure the program handles this correctly without attempting any calculations.
 
-2. **Non-integer input**: Ensure the program only accepts positive integer inputs. If the user enters a negative number, zero, or a non-integer value, the program should prompt the user again or handle this scenario gracefully (e.g., by outputting an error message).
-
-3. **Prime limit inclusion**: If `n` itself is a prime number, it should be included in the output. For example, if `n = 13`, the output should include 13.
-
-4. **Efficiency for larger values of `n`**: For large values of `n`, checking every number up to `n` can be inefficient. Optimizations like checking divisors up to the square root of each number or skipping even numbers after checking 2 can make the program faster. However, such optimizations are optional at this level.
+2. **Prime limit inclusion**: If `n` itself is a prime number, it should be included in the output. For example, if `n = 13`, the output should include 13.
 
 ---
 
@@ -85,9 +81,7 @@ The program should:
 
 1. **Large values of `n`**: As `n` grows, Fibonacci numbers grow very quickly. For very large values of `n` (e.g., `n > 50`), the program could run slowly or even overflow if not handled properly. While advanced optimization techniques (like memoization) aren’t necessary at this stage, it’s good to be mindful of this potential issue.
 
-2. **Negative or non-integer input**: The program should handle invalid inputs (e.g., negative numbers, zero, or non-integer inputs) gracefully by either prompting the user again or displaying an error message.
-
-3. **Recursive vs Iterative Solution**: Although recursion is a common method for Fibonacci sequences, an iterative solution is a must here to avoid stack overflow and inefficient computations at this level.
+2. **Recursive vs Iterative Solution**: Although recursion is a common method for Fibonacci sequences, an iterative solution is a must here to avoid stack overflow and inefficient computations at this level.
 
 ---
 
@@ -129,9 +123,7 @@ The program should:
 
 1. **Input of 1**: When `n = 1`, the output should be just `1`, as the table consists of only one cell (1 \* 1).
 
-2. **Non-positive inputs**: Ensure the program only accepts positive integers for `n`. If the user enters zero, a negative number, or a non-integer, the program should handle it gracefully, either by displaying an error or prompting the user again.
-
-3. **Spacing and Alignment**: For larger tables, the output could become misaligned. Consider formatting each cell’s output with consistent width for readability, especially for double- or triple-digit numbers.
+2. **Spacing and Alignment**: For larger tables, the output could become misaligned. Consider formatting each cell’s output with consistent width for readability, especially for double- or triple-digit numbers. use three space for each number.
 
 ---
 
@@ -139,14 +131,14 @@ The program should:
 
 #### Description
 
-Write a program that takes a positive integer `n` as input and prints a symmetric rhombus pattern made of asterisks (`*`). The rhombus will have a maximum width of `n` stars at its center and a total height of `2n - 1` rows. The pattern should be well-formatted and aligned so that the rhombus shape appears centered.
+Write a program that takes a positive integer `n` as input and prints a symmetric rhombus pattern made of asterisks (`*`). The rhombus will have a maximum width of `2n - 1` stars at its center and a total height of `2n - 1` rows. The pattern should be well-formatted and aligned so that the rhombus shape appears centered.
 
 The program should:
 
 1. Prompt the user to enter a positive integer `n`.
 2. Print a rhombus pattern where:
     - The first row starts with `n - 1` spaces followed by 1 star.
-    - Each subsequent row increases by one star until the middle, reaching a width of `n` stars.
+    - Each subsequent row increases by one star until the middle, reaching a width of `2n - 1` stars.
     - After reaching the middle row, each following row decreases by one star until there’s only 1 star on the last row.
 
 #### Example of Input/Output
@@ -186,9 +178,7 @@ The program should:
         *
         ```
 
-2. **Non-positive or Non-integer Input**: Ensure the program handles cases where the input is not a positive integer. If the user enters zero, a negative number, or a non-integer, the program should display an error message or prompt for valid input again.
-
-3. **Spacing and Alignment**: The pattern must be formatted correctly so that the rhombus is symmetric. Ensure the correct number of spaces is printed before the stars on each line, especially for larger values of `n`.
+2. **Spacing and Alignment**: The pattern must be formatted correctly so that the rhombus is symmetric. Ensure the correct number of spaces is printed before the stars on each line, especially for larger values of `n`.
 
 ---
 
@@ -244,8 +234,6 @@ The program should:
         GCD of 10 and 10 is 10
         LCM of 10 and 10 is 10
         ```
-
-3. **Non-positive or Non-integer Input**: The program should only accept positive integers as input. If the user enters zero, a negative number, or a non-integer, the program should display an error message or prompt for valid input again.
 
 ---
 
@@ -307,11 +295,9 @@ The program should:
 
 2. **Odd vs. Even Sizes**: Ensure that the spiral pattern works for both odd and even values of `n`. Odd dimensions will have a single center point, while even dimensions will not.
 
-3. **Non-positive or Non-integer Input**: Ensure the program handles cases where the input is not a positive integer. If the user enters zero, a negative number, or a non-integer, the program should display an error message or prompt for valid input again.
+3. **Formatting for Larger Numbers**: As `n` increases, the values in the matrix will grow. The program should format the output properly to maintain alignment, especially with larger numbers (e.g., `n = 10` will produce values up to 100).
 
-4. **Formatting for Larger Numbers**: As `n` increases, the values in the matrix will grow. The program should format the output properly to maintain alignment, especially with larger numbers (e.g., `n = 10` will produce values up to 100).
-
-5. **Out-of-Bounds Indexing**: When implementing the spiral logic, care should be taken to avoid indexing outside the bounds of the array. Ensure each move respects the current boundaries of the matrix, which shrink as the spiral progresses inward.
+4. **Out-of-Bounds Indexing**: When implementing the spiral logic, care should be taken to avoid indexing outside the bounds of the array. Ensure each move respects the current boundaries of the matrix, which shrink as the spiral progresses inward.
 
 ---
 
